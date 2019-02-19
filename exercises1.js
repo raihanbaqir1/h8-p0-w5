@@ -1,14 +1,16 @@
 function sorting(arrNumber) {
-   return arrNumber.sort()
-//    for(var i = 0; i < arrNumber.length; i++){
-//        for(var j = 0; j < (arrNumber.length - i - 1); j++){
-//            if(items[j] > items[j+1]){
-//                var temp = items[j]
-//                items[j] = items[j+1]
-//                items[j+1] = temp
-//            }
-//        }
-//    }
+//    return arrNumber.sort()
+// console.log(arrNumber.length)
+   for(var i = 0; i < arrNumber.length; i++){
+       for(var j = 0; j < (arrNumber.length - i - 1); j++){
+           if(arrNumber[j] > arrNumber[j+1]){
+               var temp = arrNumber[j]
+               arrNumber[j] = arrNumber[j+1]
+               arrNumber[j+1] = temp
+           }
+       }
+   }
+   return arrNumber
 // console.log(arrNumber)         
 }
     
@@ -16,12 +18,12 @@ function sorting(arrNumber) {
   function getTotal(arrNumber) {
     var angka = 0;
     var count = 0;
-    // console.log(arrNumber.length)
-    for(var i = arrNumber.length - 1; i >= 0; i--){
-        if(i === arrNumber.length - 1){
-            angka = arrNumber[i];
+    console.log(arrNumber.length)
+    for(var k = arrNumber.length - 1; k >= 0; k--){
+        if(k === arrNumber.length - 1){
+            angka = arrNumber[k];
             count++
-        } else if(arrNumber[i] === angka){
+        } else if(arrNumber[k] === angka){
             count++;
         } else{
             break;
