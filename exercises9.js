@@ -1,5 +1,6 @@
 function cariPelaku(str) {
-    console.log(str.match(/abc/))
+   var string = str.match(/abc+/g) 
+  return string.length 
 
   }
   
